@@ -19,7 +19,7 @@ spring:
         - id: point
           uri: http://localhost:8083
           predicates:
-            - Path=/points/**
+            - Path=/points/**,/forfeiture/**
         - id: mypage
           uri: http://localhost:8084
           predicates:
