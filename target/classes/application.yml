@@ -15,15 +15,23 @@ spring:
         - id: message
           uri: http://localhost:8082
           predicates:
-            - Path=/messages/** 
+            - Path=/messages/**
         - id: point
           uri: http://localhost:8083
           predicates:
-            - Path=/points/**
+            - Path=/points/**,/forfeitures/**
         - id: mypage
           uri: http://localhost:8084
           predicates:
             - Path= /mypages/**
+        - id: inquiry
+          uri: http://localhost:8085
+          predicates:
+            - Path=/inquiries/**
+        - id: inquiryBoard
+          uri: http://localhost:8086
+          predicates:
+            - Path= /inquiryBoards/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -35,7 +43,6 @@ spring:
               - "*"
             allowCredentials: true
 
-
 ---
 
 spring:
@@ -46,19 +53,27 @@ spring:
         - id: member
           uri: http://member:8080
           predicates:
-            - Path=/members/** 
+            - Path=/members/**
         - id: message
           uri: http://message:8080
           predicates:
-            - Path=/messages/** 
+            - Path=/messages/**
         - id: point
           uri: http://point:8080
           predicates:
-            - Path=/points/** 
+            - Path=/points/**,/forfeitures/**
         - id: mypage
           uri: http://mypage:8080
           predicates:
             - Path= /mypages/**
+        - id: inquiry
+          uri: http://inquiry:8080
+          predicates:
+            - Path=/inquiries/**
+        - id: inquiryBoard
+          uri: http://inquiryBoard:8080
+          predicates:
+            - Path= /inquiryBoards/**
       globalcors:
         corsConfigurations:
           '[/**]':
