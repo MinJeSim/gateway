@@ -19,7 +19,7 @@ spring:
         - id: point
           uri: http://localhost:8083
           predicates:
-            - Path=/points/**,/forfeitures/**
+            - Path=/points/**
         - id: mypage
           uri: http://localhost:8084
           predicates:
@@ -27,7 +27,7 @@ spring:
         - id: inquiry
           uri: http://localhost:8085
           predicates:
-            - Path=/inquiries/**
+            - Path=/inquiries/**,/inquiryHsts/**
         - id: inquiryBoard
           uri: http://localhost:8086
           predicates:
@@ -61,7 +61,7 @@ spring:
         - id: point
           uri: http://point:8080
           predicates:
-            - Path=/points/**,/forfeitures/**
+            - Path=/points/**
         - id: mypage
           uri: http://mypage:8080
           predicates:
@@ -69,7 +69,7 @@ spring:
         - id: inquiry
           uri: http://inquiry:8080
           predicates:
-            - Path=/inquiries/**
+            - Path=/inquiries/**,/inquiryHsts/**
         - id: inquiryBoard
           uri: http://inquiryBoard:8080
           predicates:
