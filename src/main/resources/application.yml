@@ -19,7 +19,7 @@ spring:
         - id: point
           uri: http://localhost:8083
           predicates:
-            - Path=/points/**,/forfeitures/**
+            - Path=/points/**,/inquiryHsts/**
         - id: mypage
           uri: http://localhost:8084
           predicates:
@@ -61,7 +61,7 @@ spring:
         - id: point
           uri: http://point:8080
           predicates:
-            - Path=/points/**,/forfeitures/**
+            - Path=/points/**,/inquiryHsts/**
         - id: mypage
           uri: http://mypage:8080
           predicates:
